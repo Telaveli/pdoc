@@ -1,7 +1,7 @@
 # Pagekit-ის დოკუმენტაცია
 ეს არის ღია კოდის, მოდულური, მოწინავე ტექნოლოგიებით გამართული კონტენტის მართვის მენეჯერი  [Pagekit-ის](https://pagekit.com) დოკუმენტაცია.
 - დასაწყისი
-  1. [რეკომენდაციები](getting-started/requirements.md)
+  1. [მოთხოვნები](getting-started/requirements.md)
   2. [ინსტალაცია](getting-started/installation.md)
   3. [განახლება](getting-started/updating.md)
   4. [საკონფიგურაციო ფაილი](getting-started/configuration-file.md)
