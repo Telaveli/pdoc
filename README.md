@@ -1,46 +1,46 @@
-# Pagekit Documentation
-This is the documentation for [Pagekit](https://pagekit.com), a modular open source CMS built with modern technologies.
-- Getting Started
-  1. [Requirements](getting-started/requirements.md)
-  2. [Installation](getting-started/installation.md)
-  3. [Updating](getting-started/updating.md)
-  4. [Configuration File](getting-started/configuration-file.md)
-  5. [File Structure](getting-started/file-structure.md)
-  6. [Server Configuration](getting-started/server-configuration.md)
-  7. [Getting Help](getting-started/getting-help.md)
+# Pagekit-ის დოკუმენტაცია
+ეს არის ღია კოდის, მოდულური, მოწინავე ტექნოლოგიებით გამართული კონტენტის მართვის მენეჯერის (კმმ) [Pagekit-ის](https://pagekit.com) დოკუმენტაცია.
+- დასაწყისი
+  1. [რეკომენდაციები](getting-started/requirements.md)
+  2. [ინსტალაცია](getting-started/installation.md)
+  3. [განახლება](getting-started/updating.md)
+  4. [საკონფიგურაციო ფაილი](getting-started/configuration-file.md)
+  5. [ფაილების სტრუქტურა](getting-started/file-structure.md)
+  6. [სერვერის კონფიგურაცია](getting-started/server-configuration.md)
+  7. [დახმარება](getting-started/getting-help.md)
 
-- User Interface
-  1. [Dashboard](user-interface/dashboard.md)
-  2. [Site](user-interface/site.md)
-  3. [Blog](user-interface/blog.md)
-  4. [Users](user-interface/users.md)
-  5. [System](user-interface/system.md)
+- მომხმარებლის ინტერფეისი
+  1. [დაფა](user-interface/dashboard.md)
+  2. [საითი](user-interface/site.md)
+  3. [ბლოგი](user-interface/blog.md)
+  4. [მომხმარებლები](user-interface/users.md)
+  5. [სისტემა](user-interface/system.md)
   6. [Marketplace](user-interface/marketplace.md)
-  7. [Editor](user-interface/editor.md)
-  8. [Finder](user-interface/finder.md)
+  7. [რედაქტორი](user-interface/editor.md)
+  8. [საძიებელი](user-interface/finder.md)
 
-- Developer Guides
-  1. [Extensions](developer-guides/extensions.md)
-  2. [Themes](developer-guides/themes.md)
-  3. [Widgets](developer-guides/widgets.md)
-  4. [Dashboard Widgets](developer-guides/dashboard-widgets.md)
-  5. [Translate Pagekit](developer-guides/translation.md)
+- პროგრამისტის სახელმძღვანელო
+  1. [გაფართოება](developer-guides/extensions.md)
+  2. [თემა](developer-guides/themes.md)
+  3. [ვიჯეტი](developer-guides/widgets.md)
+  4. [ვიჯეტების დაფა](developer-guides/dashboard-widgets.md)
+  5. [Pagekit-ის თარგმანი](developer-guides/translation.md)
   6. [Marketplace](developer-guides/marketplace.md)
 
-- Developer Basics
-  1. [Application](developer-basics/application.md)
-  2. [Packages](developer-basics/packages.md)
-  3. [Modules](developer-basics/modules.md)
-  4. [Routing](developer-basics/routing.md)
-  5. [Response](developer-basics/response.md)
-  5. [Users & Permissions](developer-basics/users-permissions.md)
-  6. [Views & Templating](developer-basics/views-templating.md) TODO
-  7. [Database](developer-basics/database.md) TODO
-  8. [Translation](developer-basics/translation.md)
+- საბაზო პროგრამირება
+  1. [აპლიკაციები](developer-basics/application.md)
+  2. [პაკეტები](developer-basics/packages.md)
+  3. [მოდულები](developer-basics/modules.md)
+  4. [მარშრუტები](developer-basics/routing.md)
+  5. [გამოხმაურება](developer-basics/response.md)
+  5. [მომხმარებლები და უფლებები](developer-basics/users-permissions.md)
+  6. [ხედები და შაბლონები](developer-basics/views-templating.md) TODO
+  7. [მონაცემთა ბაზა](developer-basics/database.md) TODO
+  8. [თარგმნა](developer-basics/translation.md)
 
-- Troubleshooting
-  1. [System Information](troubleshooting/system-information.md)
-  2. [Debug Mode](troubleshooting/debug-mode.md)
-  3. [Permissions](troubleshooting/permissions.md)
+- პრობლემების მოგვარება
+  1. [სისტემის ინფორმაცია](troubleshooting/system-information.md)
+  2. [Debug რეჟიმი](troubleshooting/debug-mode.md)
+  3. [უფლებები](troubleshooting/permissions.md)
   4. [Not Found](troubleshooting/not-found.md)
-  5. [Server Error](troubleshooting/server-error.md)
+  5. [სერვერის შეცდომები](troubleshooting/server-error.md)
