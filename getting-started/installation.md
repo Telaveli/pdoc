@@ -1,38 +1,38 @@
-# Installation
-<p class="uk-article-lead">This document will guide you through the Pagekit installation process.</p>
+# ინსტალაცია
+<p class="uk-article-lead">ეს დოკუმენტი არის საეხლმძვანელო Pagekit-ის ინსტალაციისათვის.</p>
 
-[Download](http://pagekit.com/api/download/latest) the latest Pagekit archive and extract the contents to your webserver - either to the web root directory or to a subfolder, for example called `/pagekit`.
+[ჩამოტვირთეთ](http://pagekit.com/api/download/latest) უახლესი Pagekit-ის არქივი და გახსენით იგი თქვენს ვებსერვერზე - ძირეულ დირექტორაში ან რომელიმე ქვეპაპკაში, მაგალითად  `/pagekit`.
 
-**Note** If you unzip the package locally before uploading, make sure to also include hidden files `.htaccess`.
+**Note** თუ არქივს გახსნით ლოკალურად და შემდეგ ატვირთავთ, მიაქციეთ ყურადღება აგრეთვე დამალულ ფაილს .htaccess.
 
-## Initial Setup
-Open your browser and navigate to the URL of the extracted Pagekit content. You should see the first screen of the web installer.
+## დაყენების ინიციალიზაცია
+გახსენით ბროუზერი და გადადით მისამართზე, რომელზეც მოთავსებულია Pagekit-ის კონტენტი. თქვენ უნდა დაინახოთ ინსტალაციის პირველი გვერდი.
 
-### Step 1 - Language
-In the first step of the setup process you choose the main language for the site. It will be the default language used on the admin panel and frontend. Both can be changed at any time later.
+### ნაბიჯი 1 - ენა
+დაყენების პროცესის პირველ ნაბიჯზე თქვენ ირჩევთ ძირითად ენას საიტისათვის. ის შეძლება დარჩენს ავტომატურად შემოთავაზებული როგორც სამართავი პანელისთვის, ისე საიტისთვის. ორივეს შეცვლა შესაძლებელია ნებისმიერ დროს შემგომში.
 
-### Step 2 - Database
-In this step you enter the details to connect to the database.
+### ნაბიჯი 2 - მონაცემთა ბაზა
+ამ ნაბიჯზე თქვენ შეგაქვთ დეტალები მონაცემთა ბაზასთან შეერთებისათვის.
 
-Field           | Description
+არე           | დანიშნულება
 --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------
-`Driver`        | Enter the Database Driver. It depends on the type of database you want to use.
-`Hostname`      | Enter the host name of your database server. If the webserver and database server are on the same machine, this will be `localhost` or `127.0.0.1`.
-`User`          | Enter a MySQL username that has access to the database.
-`Password`      | Enter the MySQL user's password.
-`Database Name` | Enter the database name.
-`Table Prefix`  | You can change the prefix that is used for the database tables. The default prefix is `pk_`.
+`Driver`        | შეიყვანეთ მონაცემთა ბაზის დრაივერი, იმის მიხედვით თუ რა ტიპის მონაცემთა ბაზის გამოყენებას აპირებთ.
+`Hostname`      | შეიყვანეთ თქვენ მონაცემთა ბაზის სერვერის სახელი. თუ ვებსერვერი და მონაცემთა ბაზა განთავსებულია ერთ ჰოსტზე მაშინ მისი სახელი უნდა იყოს  `localhost` ან `127.0.0.1`.
+`User`          | შეიყვანეთ MySQL მომხმარებლის სახელი, რომელსაც აქვს დაშვება მონაცემთა ბაზაზე.
+`Password`      | შეიყვანეთ MySQL მომხმარებლის პაროლი.
+`Database Name` | შეიყვანეთ მონაცემთა ბაზის სახელ.
+`Table Prefix`  | თქვენ შეგიძლიათ შეცვალოთ პრეფიქსი, რომელიც მოცემულაი მონაცემთა ბაზის ცხრილებისავის. ავტომატური პრეფიქსი არის `pk_`.
 
-**Note** Pagekit will try to create the database during installation. You can also do this yourself using a tool like [phpMyAdmin](http://http://www.phpmyadmin.net/). Feel free to use an existing database. Pagekit prefixes its tables to avoid conflicts.
+**შენიშვნა** Pagekit-მა უნდა სცადოს ბაზის შექმნა ინსტალაციის განმავლობაში. ამის გაკეთება საკუთრივაც შეგიძლიათ, სხვადასხვა ინსტრუმენტების გამოყენებით, ისეთი როგორიცააა მაგალითად [phpMyAdmin](http://http://www.phpmyadmin.net/). თავისუფლად შესაძლებელია არსებული მონაცემთა ბაზის გამოყენება. Pagekit კონფლიქტის თავიდან ასაცილებლად აპრეფიქსებს თავის ცრილებს.
 
-### Step 3 - Site setup
-After entering your site's title, you need to create a user account for Pagekit. This user will have admin access and will be able to log in to Pagekit's control panel, once the installation is finished.
+### ნაბიჯი 3 - საიტის დაყენება
+საიტის სათაურის შეყვანის შემდეგ, Pagekit-ისთვის. ამ მომხმარებელს ექნება ადმინისტრატორსი დაშვება და შეეძლება შესვლა სამართავ პანელში, მას მერე რაც ინსტალაცია იქნება დასრულებული.
 
-Field        | Description
+ველი        | აღწერა
 ------------ | ------------------------
-`Site Title` | The site title.
-`Username`   | Enter the admin username.
-`Password`   | Enter the admin password.
-`Email`      | Enter the admin email.
+`Site Title` | საიტის სათაური.
+`Username`   | შეიყვანეთ ადმინისტრატორის სახელი.
+`Password`   | შეიყვანეთ ადმინისტრატორის პაროლი.
+`Email`      | შეიყვანეთ ადმინისტრატორის ელ. ფოსტა.
 
-Once the installation is successful you are redirected to the login screen. You can log in to Pagekit's admin panel with the account you created. If you want to login to the admin area in the future, you can always reachthe login screen by appending `/admin` to your site's URL.
+ინსტალაციის დასრულების შემდეგ მოხდება გადამისამართება შესასვლელ გვერდზე. უკვე შესაძლებელია სამართავ პანელში შესვლა იმ ანგარიშით, რომელიც შეიქმნა ინსტალაციის განმავლობაში. მომავალშიც, როდესაც მოისურვებთ სამართავ პანელში შესვლას, შესასვლელი გვერდის გამოსაძახებლად, ძირითად მისამართს დაამატებთ `/admin`-ს.
