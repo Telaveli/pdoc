@@ -1,16 +1,16 @@
-# Modules
-<p class="uk-article-lead">Pagekit uses *Modules* to set up the application code. The module definition is used to provide bootstrapping, routing and other configuration options. Here you can listen for events, add custom classes and your own controllers.</p>
+# მოდულები
+<p class="uk-article-lead">აპლიკაციების პროგრამული კოდისათვის Pagekit-ი იყენებს *მოდულებს*. მოდულის აგებისას გამოიყენება პირველადი ჩატვირთვის, მარშრუტიზაციის და სხვა საკონფიგურაციო ოპციები. აქ თქვენ შეგიძლიათ დაწეროთ მოვლენები, დაამატოთ საკუთარი კლასები და კონტროლერები.</p>
 
-## Definition: index.php
-In order to load and configure a module, Pagekit has a ModuleManager. It will look for an `index.php` file in the root of the module's directory and expect it to return a PHP array. Think of this array as the bootstrap for the modules code.
+## განსაზღვრება: index.php
+იმისათვის, რომ ჩატვირთოს ან დააკონფიგურიროს მოდული, Pagekit-ს აქვს მენეჯერი -  ModuleManager. ის უყურებს  `index.php` ფაილს მოდულის ძირეულ დირექტორიაში და ელოდება მისგან  PHP მასივის დაბრუნებას. ჩათვალეთ, რომ მოდულის ჩავირთვიათვის ეს მასივი უპირველესია.
 
-By setting the right properties in this array, you tell Pagekit everything it needs to know about your module.
+ამ მასივში თვისებების სწორად დაწერით, თქვენ ეუბნებით Pagekit-ს ყველაფერს, თუ რა უნდა იცოდეს ამ მოდულის შესახებ.
 
 ```php
 <?php
 
 /*
- * Return a php array which is the module definition.
+ * აბრუნებს მოდულის განმსაზღვრელ მასივს.
  */
 return [
 
@@ -20,12 +20,12 @@ return [
 ];
 ```
 
-This minimal example is a valid module definition, although it doesn't do anything except being loaded by Pagekit. A module is only loaded if the package it comes in has been enabled in the admin panel.
+ეს არის მოდულის სწორად აღწერის მინიმალური მაგალითი, მაგრამ ის არაფერს არ აკეთებ, გარდა იმისა რომ ჩატვირთული იქნება  Pagekit-ის მიერ. მოდული იტვირთება მხოლოდ მაშინ, თუ ის ჩართულია ატმინისტრატორის მართვის პანელიდან.
 
-**Note:** If you start exploring Pagekit's internal structure, you will see the same module structure in many places, it's a central concept of the Pagekit architecture.
+**შენიშვნა:** თუ გადახედავთ If you start exploring Pagekit-ის შინაგან სტრუქტურას, ასეთ მოდულის კონსტრუქციას თქვენ მრავალ ადგილას შეხდებით, ესაა Pagekit-ის არქიტექტურის ძირითადი კონცეფცია.
 
-### **main**: Bootstrap code
-The `main` function gets called when the module is loaded. The function receives the Pagekit Application Container instance as a parameter.
+### **main**: Bootstrap (პირველი ჩატვირვის) კოდი
+Theფუნქცია `main` იძახება, როცა იტვირთება მოდული. მას პარამეტრის სახით გადაეცემა  Pagekit-ის აპლიკაციის კონტეინერის ეგზეპლიარი.
 
 ```php
 use Pagekit\Application;
@@ -33,18 +33,18 @@ use Pagekit\Application;
 // ...
 
 'main' => function (Application $app) {
-    // bootstrap code
+    // ჩასატვირთი კოდი
 }
 ```
 
-You can also load an module class. Its namespace has to be loaded in order for this to work (see `autoload` property). Also the class needs to implement the `Pagekit\Module\ModuleInterface`.
+თქვენ ასევე, შეგიძლიათ ჩატვითოთ მოდულის კლასი. საკუთარი სახელთა სივრცის ჩატვითვა აუცილებელია მისი მუშაობისათვის. (იხ. `autoload` თვისება). აგრეთვე საჭიროა, რომ კლასმა გააკეთოს `Pagekit\Module\ModuleInterface` რეალიზება.
 
 ```php
 'main' => 'MyNamespace\\MyExtension',
 ```
 
-### **autoload**: Register custom namespaces
-Pass a list of namespaces and paths to be auto loaded by Pagekit. The contained classes will be available via autoloading (`use Pagekit\Hello\HelloExtension`). The path is relative to the module's path.
+### **autoload**: საკუთარი სახელთა სივრცის რეგისტრაცია
+Pagekit-ის მიერ მოხდება ავტომატური ჩატვირთვა გადაეცემული სახელების და გზების სიისა. არსებული კლასები ხელმისაწვდომი უნდა იყოს ავტოჩამტვირთველისათვის (`use Pagekit\Hello\HelloExtension`). ფაილების განთავსების გზები ეფარდება მოდულის განთავსებას.
 
 ```php
 'autoload' => [
@@ -54,8 +54,8 @@ Pass a list of namespaces and paths to be auto loaded by Pagekit. The contained 
 ]
 ```
 
-### **routes**: Mount controllers
-Use the `routes` property to mount controllers to a route. Learn more about [Routing and Controllers](routing.md).
+### **routes**: კონტროლერების მიერთებაMount controllers
+Use the `routes` თვისების გამოყენებით ხდება კონტროლერების მასშუტზე მიერთება. წაიკითხეთ მეტი ამის შესახებ  [მარშრუტიზაცია და კონტროლერები](routing.md).
 
 ```php
 'routes' => [
@@ -70,8 +70,8 @@ Use the `routes` property to mount controllers to a route. Learn more about [Rou
 ]
 ```
 
-### **permissions**: Define permissions
-Your module can define permissions. These will be managed in the Pagekit User & Permissions area. You can protect your routes with these permissions or prevent users from performing unauthorized actions.
+### **permissions**: დაშვებების განსაზღვრაDefine permissions
+თქვენს მოდულს შეუძლია განსაზღვროს დაშვებები. მათი მართვა შესაძლებელია  Pagekit User & Permissions არედან. თქვენ შეგიძლიათ დაიცვათ თქვენი მარშუტები ან დააწესოთ გარკვეული არასანქცირებული მოქმედებების აკრძალვა მომხმარებლების მრიდან.
 
 ```php
 'permissions' => [
