@@ -1,39 +1,39 @@
-# Configuration File
-<p class="uk-article-lead">Change settings in Pagekit's configuration file.</p>
+# საკონფიგურაციო ფაილი
+<p class="uk-article-lead">შესაძლებელია შეიძლვალოს პარაეტრები Pagekit-ის საკონფიგურაციო ფაილში.</p>
 
-Pagekit stores parts of its configuration in a `/config.php` file located on the root level. It is auto generated during the installation. The normal way of editing it would be through Pagekit _System > Settings_ admin area, although there are situations where the manual editing is necessary. The following sections describe the most common settings.
+Pagekit-ის საკონფიგურაციო ნაწილები მოავსებულია ფაილში `/config.php`, რომელიც განთავსებულია ძირეულ პაპკაში. მის ავტოგენერაცი ხდება ინსტალაციის დროს. ნორმალურ სიტუაციაში მისი რედაქტირება ხდება  Pagekit-ის _System > Settings_ ადმინისტრატორის არიდან, მაგრამ არსებობს სიტუაციები, როდესაც საჭირო ხდება მისი ხელით რედაქტირებაც. მოყვანილი ნაწილები განსაზღვრავს ხშირიდ საჭირო პარამეტრებს.
 
 ```php
 'database' => [
-  'default' => 'mysql',      // default database connection
-  'connections' => [         // array of database connections
-    'mysql' => [             // database driver name, mysql or sqlite
-      'host' => 'localhost', // database server host name
-      'user' => 'user',      // database server user name
-      'password' => 'pass',  // database password
-      'dbname' => 'pagekit', // database name
-      'prefix' => 'pk_'      // database prefix
+  'default' => 'mysql',      // ძირეული მონაცემთა ბაზა
+  'connections' => [         // მასივი მონაცემთა ბაზასთან შეერთებისათვის
+    'mysql' => [             // მონაცემთა ბაზის დრაივერის სახელი, mysql ან sqlite
+      'host' => 'localhost', // მონაცემთა ბაზის სერვერის სახელი
+      'user' => 'user',      // მონაცეთა ბაზის მომხმარებლის სახელი
+      'password' => 'pass',  // მონაცეთა ბაზის პაროლი
+      'dbname' => 'pagekit', // მონაცემთა ბაზის სახელი
+      'prefix' => 'pk_'      // ცხრილების პრეფიქსი
     ]
   ]
 ],
 'system' => [
-  'secret' => 'secret'       // the secret string generated during installation
+  'secret' => 'secret'       // საიდუმლო სტრიქონი, რომელიც გენერიდება ინსტალაციის დროს
 ],
 'system/cache' => [
   'caches' => [
     'cache' => [
-      'storage' => 'auto'    // the cache method to be used, if enabled
+      'storage' => 'auto'    // თუ ჩართულია, კეშირების მეთოდი.
     ]
   ],
-  'nocache' => false         // the cache state - you can disable it entirely by setting to 'true'
+  'nocache' => false         // კეშის მდგომარეობა - თქვენ შეგიძლიათ გათიშოთ, თუ მის მნიშვნელობას დააყენებთ  'true'-ს
 ],
 'system/finder' => [
-  'storage' => '/storage'    // the relative path to the storage folder - e.g. media files will be stored here
+  'storage' => '/storage'    // ფართობითი გზა საწყობის პაპკისკენ, სადაც მედია ფაილები უნდა იქნას შენახული
 ],
 'application' => [
-  'debug' => false           // the debug mode state - enable while developing to get debug output
+  'debug' => false           // debug რეჟიმის მდგომარეობა - ჩართავთ საითის პროგრამირებისას
 ],
 'debug' => [
-  'enabled' => false         // the debug toolbar state - enable it to get information, about requests, memory usage etc
+  'enabled' => false         //  debug- ინსტრუმენტეის ზოლის მდგომარეობა
 ]
 ```
