@@ -70,7 +70,7 @@ Use the `routes` თვისების გამოყენებით ხ�
 ]
 ```
 
-### **permissions**: დაშვებების განსაზღვრაDefine permissions
+### **permissions**: დაშვებების განსაზღვრა
 თქვენს მოდულს შეუძლია განსაზღვროს დაშვებები. მათი მართვა შესაძლებელია  Pagekit User & Permissions არედან. თქვენ შეგიძლიათ დაიცვათ თქვენი მარშუტები ან დააწესოთ გარკვეული არასანქცირებული მოქმედებების აკრძალვა მომხმარებლების მრიდან.
 
 ```php
@@ -83,10 +83,10 @@ Use the `routes` თვისების გამოყენებით ხ�
 ]
 ```
 
-### **resources**: Register resource shorthands
-You can register prefixes to be used as shorter versions when working with paths. For example use `views:admin/settings.php` to reference `packages/VENDOR/PACKAGE/views/admin/settings.php`. Pagekit registers a few paths for extensions and themes by default already.
+### **resources**:  shorthand - რესურსების რეგისტრაცია
+შეიძლება პრეფიქსების რეგირტრაცი, რამელიც გამოიყენება, როგორც მოკლე ვერსია ფაილების სრული გზისა. მაგალითისთვის გამოიყენება `views:admin/settings.php` რათა მივწვდეთ `packages/VENDOR/PACKAGE/views/admin/settings.php`ფაილს. Pagekit-ს თავის მხრივ, გაფართოებებისათვის და თემებისათვის,  უკვე რეგისტრირებული აქვს რამოდენიმე გზა.
 
-This works whenever the Pagekit filesystem is used (i.e. when generating the url for a file path or rendering a view from a controller).
+ეს მუშაობს, როცა იყენებთ Pagekit-ის ფაილურ სისტემას(ე. ი. როცა ხდება ფაილის გზისთვის  url-ის ან კონტროლერიდან რომელიმე ხედის დარენდერების გენერაცია).
 
 ```php
 'resources' => [
@@ -96,8 +96,8 @@ This works whenever the Pagekit filesystem is used (i.e. when generating the url
 ],
 ```
 
-### **events**: Listen to events from Pagekit or other modules
-Events are triggered at several points in the Pagekit core and potentially by other modules. An event always has a unique name that identifies it. You can register callback functions to any event.
+### **events**: Pagekit-ის ან სხვა მოდულების მოვლენების მოსმენა
+მოვლენები გამოიძახება Pagekit-ის ბირთვის რამოდენიმე წერტილში და პოტენციურად სხვა მოდულების მიერ. მოვლენას ყოველთვის აქვს მისი მაიდენტიფიცირებელი უნიკალური სახელი. შესაძლებელია უკუგამოძახების ფუნქციის რეგისტრაციაც.
 
 For more information on the Event system, check out the [Events section](../developer-basics/architecture-events.md)
 
@@ -111,8 +111,8 @@ For more information on the Event system, check out the [Events section](../deve
 ]
 ```
 
-### **config**: Default module configuration
-These are the module's default configuration values.
+### **config**: მოტულის ძირითადი კონფიგურიაცია
+ესენია მოტდულის ძირითადი საკონფიგურაციო ცვლადები.
 
 ```php
 'config' => [
@@ -120,8 +120,8 @@ These are the module's default configuration values.
 ],
 ```
 
-#### Read config
-To read the config of a module, you can access the `config` property of the module instance. This config is the result of both the default config stored inside the `index.php` and changes that are stored in the database.
+#### config-ის წაკითხვა
+მოდულის კონფიგურაციის წაკითხვა შესაძლებელია `config` თვისებით module-ს ეგზეპლიარიდან. ეს არის შედეგი ორი config-ის  is the result of both the default config stored inside the `index.php` და ც changes that are stored in the database.
 
 ```php
 $config = $app->module('hello')->config;
