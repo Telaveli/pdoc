@@ -1,6 +1,6 @@
-# Updating
-<p class="uk-article-lead">Before you perform an update, make sure you have a backup of the current Pagekit installation and your database. That way you can always recover previous states of your installation in case something goes wrong.</p>
+# განახლება
+<p class="uk-article-lead">სანამ განაახლებთ, რეკომენდირებულია შენახული გქონდეთ თქვენი მიმიდინარე Pagekit-ის ინსტალაცია და მონაცემთა ბაზა. ეს მოქმედება დააზღვევს თქვენს მონაცემებს და მოგცემთ აღდგენის საშუალებას, თუ განახლება რაღაც მიზეზი გამო არ მოხერხდა.</p>
 
-The recommended way of updating Pagekit is through its admin panel. Open _System > Update_ and click the _Update_ button. To make sure that the update was successful, just open _System > Info_. If everything went smoothly, you should see the new version number under the _System_ tab.
+რეკომენდირებულია, რომ  Pagekit-ის განახლება მოხდეს სამართავი პანელიდან. გახსენით _System > Update_ და დააკლიკეთ  _Update_ ღილაკს. დარწმუნდით, რომ დარწმუნდეთ, რომ განახლება დამთავრდა წარმატეით, გახსენით _System > Info_. თუ ყვალაფერი კარგად დამთავრდა, ჩანართ _System_-ში ახალი ვერსია გამოისახება.
 
-**Note** It is possible to update Pagekit manually, although it's not recommended. To do so, [download](http://pagekit.com/api/download/latest) the latest release from [http://pagekit.com](http://pagekit.com) and extract the archive. Then upload the folder to your webserver and overwrite the existing files in the Pagekit folder. A database update (if present) is triggered after logging in to the admin panel.
+**შენიშვნა** შესაძლებელია Pagekit-ის განახლება ხელითაც, მაგრამ არაა რეკომენდირებული. ხელი განახლებისათვის, [ჩამოტვირთე](http://pagekit.com/api/download/latest) უახლესი ვერსია [http://pagekit.com](http://pagekit.com) საიტიდან და გასენი ეს არქივი. შემდეგ ატვითე პაპკა თქვენ ვებსერვრზე და გადააწერე არსებულ ფაილებზე Pagekit პაპკაში. ბაზის განახლება ხდება, როდესაც შეხვალთ სამართავ პანელში.
