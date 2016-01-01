@@ -1,10 +1,10 @@
-# Widgets
-<p class="uk-article-lead">Use Widgets to render small chunks of content at different positions of your site.</p>
+# ვიჯეტები
+<p class="uk-article-lead">ვიჯეტების გამოყნებით შესაძლებელია საიტის სხვადასხვა ადგილას შესრულებული იქნას კონტენტის პატარა ნაჭრები.</p>
 
-To determine where a Widget's content will be rendered, the admin panel has a _Widgets_ section to publish widgets in specific positions that are defined by the theme. Extensions and themes can both come with widgets, with no difference in development.
+იმის განსაზღვრისავის, თუ სად უნდა განთავსდეს ვიჯეტის კონტენტი საიტზე, სამართვავ პანელში არის _Widgets_ განყოფილება, იმისათვის, რომ შესაძლებელი იყოს ვიჯეტის გამოქვეყნება სასურველ პოზიციაში, რომლებიც განსაზღვრულია თემის მიერ. გაფართოებაშიც და თემებაშიც ვიჯეტი მოსულია ერთნაირად რაიმე პროგრამული განსხვავების გარეშე.
 
-## Define widget positions in your theme
-You can define any number of widget positions in your theme`s`index.php`.
+## ვიჯეტის პოზიციის განსაზღვრა თქვენს თემაში
+თქვენ შეგიძლიათ რამდენიც საჭიროა იმდენი პოზიცია განსაზღვროთ ვიჯეტისათვის თქვენი თემის `index.php` ფაილში.
 
 ```php
 'positions' => [
@@ -15,8 +15,8 @@ You can define any number of widget positions in your theme`s`index.php`.
 ],
 ```
 
-## Render Widgets in your theme
-To render everything published inside a Widget position, you can use the View renderer instance available from your theme's `views/template.php`:
+## თემაში ვიჯეტის რენდერი
+იმისათვის რომ დაარენდეროთ ვიჯეტი ყველგან გამოქვეყნებულ პოზიციაზე, შესაძლებელია გამოიყენოთ რენდერის ეგზეპლიარი თქვენი თემის  `views/template.php`შაბლონიდან:
 
 ```php
 <?php if ($view->position()->exists('sidebar')) : ?>
@@ -24,8 +24,8 @@ To render everything published inside a Widget position, you can use the View re
 <?php endif; ?>
 ```
 
-## Register new Widget type
-To register a new Widget type you can make use of the `widgets` property in your `index.php`.
+## ვიჯეტის ახალი ტიპის რეგისტრაცია
+ვიჯეტის ახალი ტიპის რეგისტრაციისათვის შეგიძლიან გამოიყენოთ `widgets` თვისება თქვენ `index.php` ფაილში.
 
 ```php
 'widgets' => [
@@ -35,8 +35,8 @@ To register a new Widget type you can make use of the `widgets` property in your
 ],
 ```
 
-## Define new Widget type
-Internally, a Widget in Pagekit is a module. It is therefore defined by a module definition: A PHP array with a certain set of properties.
+## ვიჯეტის ახალი ტიპის განსაზღვრა
+შინაგანად, ვიჯეტი Pagekit-ში მოდულია. ამიტომ ის განსაზღვრულია მოდულის განსაზღვრებით: A PHP მასივი განსაზღვრული თვისებების ნაკრებით.
 
 `widgets/hellowidget.php`:
 
@@ -67,7 +67,7 @@ return [
 ];
 ```
 
-This example requires an additional JS component located at `hello:js/widget.js` and a php view file `hello/widgets/helloview.php` which is used to render the widget in the frontend.
+ეს მაგალში დამატეით შემოდის JS კომპონენტი განთავსებული `hello:js/widget.js`და php ხედის ფაილი `hello/widgets/helloview.php`რომელიც გამოიყენება ინტერფეისში ვიჯეტის გამოსახვისავის.
 
 `js/widget.js`:
 
@@ -90,4 +90,4 @@ window.Widgets.components['system-login:settings'] = {
 <p>Hello Widget output.</p>
 ````
 
-**Note** A good example of a full Widget is located at `app/system/modules/user/widgets/login.php` in the Pagekit core.
+**შენიშვნა** კარგი მაგალითი სრული ვიჯეტის კარგი მაგალითი განთავსებულია მისამართზე `app/system/modules/user/widgets/login.php`  Pagekit-ის ძირში.
