@@ -206,14 +206,14 @@ $app->config('hello')->set('message', 'Custom message');
 ```
 
 ### **settings**: პარამეტრების გვერდზე გადასვლა
-Link to a route that renders your settings screen. Setting this property makes Pagekit render a _Settings_ button next to your theme or extension in the admin panel listing.
+მარშუტი, რომელსაც გადავყევართ  პარამეტრების გვერდზე. ამ პარამეტრის დაყენებით  Pagekit-ს თემის ან გაფართოების სამართავ პანელში გამოაქვს  _Settings_ ღილაკი.
 
 ```php
 'settings' => '@hello/admin/settings',
 ```
 
-### **widgets**: Register Widgets
-A Widget is also a module. With the `widgets` property you can register all widget module definition files. Each of those files is expected to return a PHP array in the form of a valid module definition. Learn more about [Widgets](../developer-guides/widgets.md).
+### **widgets**: ვიჯეტის რესიგსტრაცია
+ვიჯეტი აგრეთვე მოდულია. `widgets` თვისების საშუალებით შესაძლებელია დავარეგისტრიროთ ვიჯეტის განმსაზღვერელი ყველა ფაილი. რომელაგან ყოველი აბრუნებს PHP მასივს მოდულის აღწერის ფორმატში. უფრო მეტის სწავლა შეიძლება ბმულზე -  [ვიჯეტები](../developer-guides/widgets.md).
 
 ```php
 'widgets' => [
