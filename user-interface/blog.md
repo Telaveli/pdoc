@@ -1,35 +1,35 @@
-# Blog
+# ბლოგი
 
-The Blog extension allows you to create articles and have users interact with you using comments.
+გაფართოება Blog საშუალებას იძლევა პუბლიკაციების შექმნის და კომენტარების საშუალებით მომხმარებლებთან ინტერაქტიული ურითიერთობის.
 
-## Posts
+## პუბლიკაციები
 
-The **Posts** tab holds the articles which form the content. The manager allows creating new posts as well as editing existing ones.
+ჩანართი **Posts**-ის საშუალებით იქმნება პოსტების შინაარსი . მენეჯერი საშუალებას იძლევა ახალი პოსტების შექმნის და უკვე არსებულის რედაქტირების.
 
-If you want to perform certain actions on one or multiple posts, click the checkbox in the first column to select posts. A toolbar appears that allows to publish, unpublish, copy or delete all selected posts.
+თუ საჭიროა ერთ ან რამოდენიმე პოსტზე გარკვეული მოქმედების შესრულება, საჭიროა მონიშვნა პირველ სვეტში არსებული ბოქსის საშუალებით. ინსტრუმენტების ზოლი საშუალებას იძლევა პუბლიკაციის, გაუკმების, კოპირების და წაშლის ყველა მონიშნული პოსტისა.
 
-When adding or editing a post the following fields are available.
+როდესაც ემატება ან რედაქტირდება პოსტი, ხელმისაწვდომია შემდეგი ველები.
 
-Field           | Description
+ველი           | აღწერა
 :-------------- | :-----------------------------------------------------------------------------------------------------------------------------------
-Title           | The post title.
-Slug            | The post slug. Used in the post URL (SEO friendly).
-Content         | Markdown or HTML content using the [Pagekit editor](editor.md).
-Excerpt         | The excerpt can contain a preview of the post.
-Image           | The post associated image.
-Status          | The post status.
-Author          | The post author.
-Publish On      | The date when the post should become publicly accessible.
-Restrict Access | The post access restriction. Leave empty for no restrictions
-Enable Markdown | Toggles the content areas Markdown.
-Enable Comments | Toggles the post comments.
+Title           | პოსტის სათაური.
+Slug            | პოსტის ალტერნატივა. გამოიყენება პოსტის URL-ში (SEO-ს შესაბამისი).
+Content         | Markdown ან HTML კონტენტი რომელსაც იყენებს [Pagekit editor](editor.md) რედაქტორი.
+Excerpt         | შეიძლება შეიცავდეს პოსტის ამონარიდს.
+Image           | პოსტთან ასოცირებული სურათი.
+Status          | პოსტის სტატუსი.
+Author          | პოსტის ავტორი.
+Publish On      | პოსტის შექმნის თარიღი.
+Restrict Access | პოსტზე დაშვების შეზღუდვა. შეუზღუდავია, თუ ველი ცარიელია
+Enable Markdown | Markdown-ის დაშვება.
+Enable Comments | პოსტზე კომენტარების დაშვება.
 
-### Edit Post
+### პოსტის რედაქტირება
 
-For more information on how to edit blog posts, read more about the [Pagekit Editor](editor.md).
+მეტი პოსტის რედაქტირებაზე მოცეცულია ბმულზე [Pagekit Editor](editor.md).
 
-## Comments
-The **Comments** tab holds the comments manager for all the Blog posts.
+## კომენტარები
+The **Comments** ჩანართი tab holds the comments manager for all the Blog posts.
 
 ## Settings
 The **Settings** tab displays general Blog settings.
