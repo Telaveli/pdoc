@@ -153,7 +153,7 @@ TODO
 
 ქვემოთ არის რამოდენიმე იდეა, თუ საიდან უნდა დასტარტოთ:
 
-- [მენიუს პუნქტსი დამატება](../developer-basics/modules.md#menu) to the admin panel's main navigation.
-- [კვაძის დამატება](../developer-basics/modules.md#nodes) to the Site Tree.
-- [ვიჯეტის შექმნა](../developer-guides/widgets.md) for the frontend or admin panel dashboard
-- [კავშირის ტიპის განსაზღვრა](../developer-basics/routing.md#links) for Pagekit's Link picker
+- [მენიუს პუნქტსი დამატება](../developer-basics/modules.md#menu) ადმინ პანელში ძირითადი ნავიგაცია.
+- [კვაძის დამატება](../developer-basics/modules.md#nodes) საიტის სტრუქტურაში.
+- [ვიჯეტის შექმნა](../developer-guides/widgets.md) ინტერფეისისათვის ან ადმინ პანელის დაფისათვის
+- [კავშირის ტიპის განსაზღვრა](../developer-basics/routing.md#links) Pagekit-ის კავშირების ამკრეფისავის
