@@ -1,10 +1,10 @@
-# Create an Extension
-<p class="uk-article-lead">An extension adds features and functionality to Pagekit. It can be a tiny plugin or a full blown application.</p>
+# გაფართოების შექმნა
+<p class="uk-article-lead">გაფართოება Pagekit უმატებს ფუნქციებს და ფუნციონალობას. ის შეიძლება იყოს მცირე ჩანართი ან სრულმაშტაბიანი აპლიკაცია.</p>
 
-**Note** The examples in this guide are taken from the _Hello_ extension. It's available via the Pagekit marketplace. When installed, the _Hello_ extension is located in `/packages/pagekit/extension-hello`.
+**შენიშვნა** ამ სახელმძღვანელოს მაგალითები აღებულია  _Hello_ გაფართოებიდან. ის ხელმისაწვდომია Pagekit-ის ბაზრიდან. როდესაც  _Hello_ გაფართოება ინსტალირებულია, ის განლაგებულია  `/packages/pagekit/extension-hello` პაპკაში.
 
-## Package definition: composer.json
-An extension is a regular Pagekit [package](../developer-basics/packages.md) of the type `pagekit-extension`. Each package needs a description in order to be recognized by Pagekit. This description is located in the `composer.json` and looks as follows. Detailed information is available in the [Packages](../developer-basics/packages.md) chapter.
+## პაკეტის განსაზღვრა: composer.json
+გაფართოება არის   Pagekit-ის `pagekit-extension` ტიპის რეგულარული [პაკეტი](../developer-basics/packages.md). ყოველ პაკეტს სჭირდება აღწერა, რათა ის ამოცნობილი იქნას  Pagekit-ის მიერ. ეს აწერა მოთავსებულია  `composer.json` ფაილში და გამოიყურება როგორც ქვემოთაა მოყვანილი. დეტალური ინფორმაცია ხელმისაწვდომია ბმულზე  [პაკეტები](../developer-basics/packages.md).
 
 ```json
 {
@@ -15,44 +15,44 @@ An extension is a regular Pagekit [package](../developer-basics/packages.md) of 
 }
 ```
 
-## Module definition: index.php
-An extension in itself is simply a [Module](../developer-basics/modules.md). So you may want to read up on modules first.
+## მოდულის აღწერა: index.php
+გაფართოება თავისმხრივ წარმოადგენს იოლ  [მოდულს](../developer-basics/modules.md). ამისათვის პირველ რიგში უნდა წაიკითხოთ მოდულის შესახებ.
 
 ```php
 
 /*
- * This array is the module definition.
+ * ეს მასივი არის ოდულის განსაზღვრება.
  */
 return [
 
-    // unique module name
+    // მოდულის უნიკალური სახელი
     'name' => 'hello',
 
-    // main point to register custom services and access existing ones
+    // მთავარი წერტილი საკუთარი სერვისების რეგისტრაციისათვის და არსებულებზე დაშვიბისათვის
     'main' => function (Pagekit\Application $app) {
 
-        // bootstrap code
+        // პირველადი ჩატვირვის კოდი
 
     },
 
-    // Autoload namespaces from given paths
+    // მოცემული გზებიდან სახელთა სივრცეების ავტოჩატვრთვა
     'autoload' => [
 
         'Pagekit\\Hello\\' => 'src'
 
     ],
 
-    // Default module configuration
+    // მოდულის ძირეული კონფიგურაცია
     'config' => []
 
 ];
 ```
 
-## Enable extension in admin panel
-When you have created your files, you need to enable the extension in the admin panel. To do so, navigate to _System / Settings / Extensions_ and click the status icon next to your extension. When your extension is disabled, the status icon is red. When your extension is enabled, it is green.
+## გაფართოების სამართავ პანელში გააქტიურება
+როდესაც ფაილები უკვე შექმნილია, საჭიროა გაფართოების მართვის პანელში აქტივაცია. ამისავის გადადით _System / Settings / Extensions_ განყოფილებაში და დააკლიკეთ სტატუსის წერტილს თქვენი გაფართოების გასწვრივ. როცა გაფართოება აქტიურია, მაშინ წერტილი არის მწვანე, წინააღმდეგ შემთხვევაში იგი წითელია.
 
-## Add a controller
-Create a controller class `src/Controller/HelloController.php`.
+## კონტროლერის დამატება
+შექმენით კონტროლერის კლასი `src/Controller/HelloController.php`.
 
 ```
 <?php
@@ -69,7 +69,7 @@ class HelloController
 }
 ```
 
-The controller class has to be part of the namespaces you set via the `autoload` property in the `index.php`.
+კონტროლერის კლასს უნდა ჰქონდეს სახელების სირვცის გამოცხადების განყოფლება, რომელსაცა აყენებთ `autoload` თვისების საშუალებით `index.php` ფაილში.
 
 ```
 // Autoload namespaces from given paths
@@ -80,7 +80,7 @@ The controller class has to be part of the namespaces you set via the `autoload`
 ],
 ```
 
-To mount the controller, you can define your own routes in the `index.php`:
+კონტროლერის მისაერთებლად შეგიძლიათ განსაზღვროთ საკუთარი მარშრუტი `index.php`-ში:
 
 ```
 'routes' => [
@@ -95,20 +95,26 @@ To mount the controller, you can define your own routes in the `index.php`:
 ],
 ```
 
-You can read more about [Controllers and Routing](../developer-basics/routing.md).
+უფრო მეტის წაკითხვა შეგიძლიათ [კორტროლერები და მარშრუტიზაცია](../developer-basics/routing.md)-ში.
 
-## What you can do with your extension
-With your basic extension up and running, it's time to explore what you can do with it. There are plentiful ways to extend the Pagekit system.
+## რა შეუძლია გააკეოს თქვნს გაფართოებას
+თქვენს მიერ შექმნილი საბაზო გაფართოება მზადაა და გაშვებულია, ახლა დროა გავარკვიოთ რა შეიძლება გავაკეოთ მისი დახმარებით. ძალიან ბევრი საშუელებაა Pagekit სისტემის გასაფართოებლად.
 
-The important thing to understand is the central module definition in your extension's `index.php`. To hook into Pagekit's workflow you probably just have to set the right property in the array configuration.
+მთავარია ცენტრაური მოდულის განსაზღვრების გაგება თქვენი გაფართოების `index.php` ფაილში. იმისათვის რომ ჩაერთოთ Pagekit-ის სამუშაო გარემოში, თქვენ ალბათ უბრალოდ უნდა დააყენოთ საკუთრების უფლებები საკონფიგურაციო მასივში.
 
-## Links
-Pagekit's concept of links allows for a reusable link picker (for example when linking from a menu item or when linking from the markdown editor). The user can choose a type of link and get further options depending on that choice. Linking to a page for example will present the user with a list of pages to choose from.
+ბედნიერებსი და განვითარების საკეთილდღეოდ
 
-In this section we will explain how custom link types can be registered and how to ask for advanced options from the user.
+## კავშირები
+Pagekit-ის კავშირების კონცეფცია საშუალებას იძლევა მრავალმხრივი კავშირების პალიტრის გამოყენების, მაგალითისათვის როდესაც აკავშირებთ მენიუს პუნქტს ან რაიმეს markdown რედაქტორიდან. მომხმარებელს შეუძლია აირჩიო კავშირის ტიპი და არჩევანიდან გამომდინარე მიიღოს სხვადასხვა საჭირო ოპციები. მაგალითისთვის, ფურცლის დასაკავშირებლად საშუალებაა მისი სიიდან ამორჩევის.
 
-### Register JS component
-In the `events` property of your module's `index.php`, register a JavaScript file that will take care of rendering the Link interface. The second parameter is the parameter of dependencies, the tilde `~` makes sure your script is only loaded then the `panel-link` script is included.
+ამ სექციაში ჩვენ განვმარტავთ როგორ დავარეგისტრიროთ მომხმარებლის კავშირების ტიპები და როგორ შემოვიტანოთ კავშირის დამატებითი ოპციები მომხმარებლისათვის
+
+
+###  JS კომპონენტის დეგისტრაცია
+
+`events` თვისებით თქვენი მოდულის `index.php` ფაილში დაარეგისტრირეთ JavaScript ფაილი რომელიც მიხედავს ინტერფეისში კავშირის  ვიზუალიზაციას. მეორე პარმეტრი არას დამოკიდებულებისაა. ტილდას `~` ტილდას მითითების გამო თქვენი სკრიპტი შესრულდება მხოლოდ მაშინ თუ  `panel-link` სკრიპტი იქნება ჩართული.
+
+
 
 ```php
 'view.scripts' => function ($event, $scripts) {
@@ -116,10 +122,10 @@ In the `events` property of your module's `index.php`, register a JavaScript fil
 }
 ```
 
-### JS component for link picker
-In the JavaScript file, you can now render the interface.
+### JS კომპონენტი კავშირის ამკრეფისათვის component for link picker
+JavaScript ფაილში ახლა თქვენ შეგიძლიათ გააკეთოთ ინტერფეისის ვიზუალიზაცია.
 
-**Note** This is most comfortable when making use of Vue components, storing them in a single `*.vue` file and bundling them using Webpack. A good example for this can be found in `blog/app/components/link-blog.vue`, the link picker from the Blog extension.
+**შენიშვნა**  ძალიან მოხერხეულია Vue კომპონენტის გამოყენება, მისი ჩაწერა ერთ  `*.vue` ფაილში და შემდეგ  Webpack-ით დამუშავება. ამისი კარგი მაგალითია  `blog/app/components/link-blog.vue`, კავშირების ამკრეფი Blog გაფართოებისავის.
 
 ```js
 window.Links.components['link-hello'] = {
@@ -139,15 +145,15 @@ window.Links.components['link-hello'] = {
 };
 ```
 
-The Vue component needs to set the 'link' property. This is probably dynamic, depending on the parameters the internal route is made up of.
+Vue კომპონენტს სჭირდება, რომ დააყენოს 'link' თვისება. This is probably dynamic, depending on the parameters the internal route is made up of.
 
 ```
 TODO
 ```
 
-Here are a few ideas to get you started:
+ქვემოთ არის რამოდენიმე იდეა, თუ საიდან უნდა დასტარტოთ:
 
-- [Add a menu item](../developer-basics/modules.md#menu) to the admin panel's main navigation.
-- [Add a node](../developer-basics/modules.md#nodes) to the Site Tree.
-- [Create a Widget](../developer-guides/widgets.md) for the frontend or admin panel dashboard
-- [Define a link type](../developer-basics/routing.md#links) for Pagekit's Link picker
+- [მენიუს პუნქტსი დამატება](../developer-basics/modules.md#menu) to the admin panel's main navigation.
+- [კვაძის დამატება](../developer-basics/modules.md#nodes) to the Site Tree.
+- [ვიჯეტის შექმნა](../developer-guides/widgets.md) for the frontend or admin panel dashboard
+- [კავშირის ტიპის განსაზღვრა](../developer-basics/routing.md#links) for Pagekit's Link picker
