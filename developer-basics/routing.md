@@ -1,11 +1,11 @@
-# Routing
-<p class="uk-article-lead">A central task solved by Pagekit is _Routing_. When the browser hits a URL, the framework will determine which action will be called.</p>
+# მარშრუტიზაცია
+<p class="uk-article-lead">Pagekit-ის მიერ გადაწყვეტილი ცენტრალური ამოცანა არის _Routing_. როდესაც ბროუზერი დაუკვეთავს URL-ს, ფრეიმვორკი გადაწყვეტს რომელ აქტივობას უნდა გამოუძახოს.</p>
 
-## Controller
-The most common way in Pagekit for creating routes is to define a _Controller_. A _Controller_ is responsible for handling requests, setting routes and rendering views.
+## კონტროლერი
+ The most common way in Pagekit-ში მარშრუტების შესაქმნელად ყველაზე გავრცელებული ხერხია   _Controller_-ის განსაზღვრა.  _Controller_ მგრძნობიარეა ხელით შეკვეთაზე, პარამეტრებში მითითებულ მარშრუტებზე და ინტერფეისის წარმოდგენაზე.
 
-### Register a Controller
-You can register a _Controller_ inside your [module configuration](modules.md). Use the `routes` property to mount controllers to a route.
+### კონტროლერის რეგისტრაცია
+ _Controller_ -ის რეგისტრაცაი შესაძლებელია საკუთარი [მოდულის კონფიგურაციაში](modules.md). უნდა გამოიყენოთ  `routes` თვისება, იმისათვის რომ კონტროლერი მიაბათ მარშრუტზე.
 
 ```php
 'routes' => [
@@ -20,8 +20,8 @@ You can register a _Controller_ inside your [module configuration](modules.md). 
 ],
 ```
 
-### Basic structure
-The class is annotated with `@Route("/hello")`, causing the Controller to be _mounted_ at `http://example.com/hello/`, meaning it will respond to all requests to that URL and sub-URLs like `http://example.com/hello/settings`.
+### საბაზო სტრუქტურა
+კლასის ანოტაცია ხდება  `@Route("/hello")`, კონტროლერი _მოებმება_  `http://example.com/hello/` მისამართზე, ის რეაგირებას გააკთებს ყველა შეკვეთაზე, რაც კი იქნება ამ URL-ზე ან sub-URL-ზე, მაგალითად `http://example.com/hello/settings`.
 
 ```php
 namespace Pagekit\Hello\Controller;
@@ -44,15 +44,15 @@ class HelloController
 }
 ```
 
-By default, your extension (or theme) will be booted and a set of default routes will be generated automatically. You can use the [developer toolbar](../tools/developer-toolbar.md) to view the newly registered routes (along with all core routes).
+ძირეულად, თქვენი გაფართოება (ან თემა) დაიბუთება და მითითებული ძირეული მარშრუტების გენერაცია მოხდება ავტომატურად. You can use the [developer toolbar-ის](../tools/developer-toolbar.md) გამოყენებით შესაძლებელია ნახოთ ყველა ახლად შექმნილი მარშრუტი (ყველა სხვა ძირითად მარშრუტებთან ერთად).
 
-Here is how to understand a route:
+ქვემოთ მოცემულია, თუ როგორ უნდა გაიგოთ მარშრუტი:
 
-Route                                                                    | Description
+მარშრუტი                                                                   | აღწერა
 ------------------------------------------------------------------------ | -----------------------------------------------------------------------
-Name <br> `@hello/hello/settings`                                        | The name of the route, can be used to generate URLs (has to be unique).
-URI <br> `/hello/settings`                                               | The path to access this route in the browser.
-Action <br> `Pagekit\Hello\Controller\DefaultController::settingsAction` | The controller action that will be called.
+Name <br> `@hello/hello/settings`                                        | მარშრუტის სახელი, უნდა გამოიყენოთ მარშრუტის შესაქმნელად (უნდა იყოს უნიკალური).
+URI <br> `/hello/settings`                                               | ამ მარშრუტზე ბროუზერიდან დასაშვები გზა.
+Action <br> `Pagekit\Hello\Controller\DefaultController::settingsAction` | კონტროლერის ფუნქცია, რომელიც უნდა იქნას გამოძახებული.
 
 By default, routes will be of the form `http://example.com/<extension>/<controller>/<action>`. A special action is `indexAction` which will not be mounted at `.../index`, but at `.../`. Advanced options for custom routes are available of course, as you will see in the next sections.
 
