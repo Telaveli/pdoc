@@ -1,5 +1,5 @@
 
-# How to develop a complete extension
+# როგორ შევიმუშაოთ სრული სახის გაფართოება
 
 <p class="uk-article-lead">This guide follows all steps needed to setup and develop a full extension to manage Todo items in the admin area of Pagekit. You will learn about basic extension concepts, controllers, routing, view rendering and the Vue.js framework.</p>
 
